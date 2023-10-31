@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(4,0,92);
+  background: linear-gradient(90deg, rgba(4,0,92,1) 0%, rgba(182,0,0,1) 50%, rgba(4,0,92,0.9948354341736695) 100%);
+  font-family: Muli, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* FORMULARIO */
+
+form {
+  border: 5px solid white;
+  padding: 40px;
+}
+
+h1 {
+  color: #FFFFF0;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+}
+
+label {
+  display: block;
+}
+
