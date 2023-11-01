@@ -15,7 +15,7 @@ export const MARCAS = [
 
 const AÑOMAXIMO = new Date().getFullYear();
 
-export const AÑOS = Array.from( new Array (20), (valor, index) => AÑOMAXIMO - index)
+export const AÑOS = Array.from( new Array (10), (valor, index) => AÑOMAXIMO - index)
 
 export const PLANES = [
     {
