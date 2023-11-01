@@ -58,7 +58,6 @@ select {
 
 select:focus {
   border: 3px solid #a30015;
-  box-shadow: 0 4px 8px 0 #a30015;
   outline: none;
 }
 
