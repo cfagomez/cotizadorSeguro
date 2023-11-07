@@ -1,13 +1,33 @@
 import { Fragment } from "react"
 import { AÑOS, MARCAS, PLANES } from "../constants"
 import useCotizador from "../hooks/useCotizador"
+import Error from "./Error"
 
 const Formulario = () => {
 
-    const {datos, handleChangeDatos} = useCotizador()
+    const {datos, handleChangeDatos, error, setError} = useCotizador()
+
+    const validarFormulario = (e) => {
+
+        e.preventDefault()
+
+        if (Object.values(datos).includes('')) {
+
+            return setError('Debes completar todos los campos')
+
+        }
+
+        setError('')
+
+    }
 
   return (
-    <form>
+    <form
+        onSubmit={validarFormulario}
+    >
+        {
+            error && <Error />
+        }
         <div className="campo">
             <label>
                 Marca
@@ -79,6 +99,10 @@ const Formulario = () => {
                 }
             </div>
         </div>
+        <input 
+            type="submit"
+            value='Enviar'
+        />
     </form>
   )
 }
