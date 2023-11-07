@@ -5,7 +5,7 @@ import Error from "./Error"
 
 const Formulario = () => {
 
-    const {datos, handleChangeDatos, error, setError} = useCotizador()
+    const {datos, handleChangeDatos, error, setError, cotizarSeguro} = useCotizador()
 
     const validarFormulario = (e) => {
 
@@ -18,6 +18,8 @@ const Formulario = () => {
         }
 
         setError('')
+
+        cotizarSeguro()
 
     }
 
