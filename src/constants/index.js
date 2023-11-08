@@ -1,15 +1,15 @@
 export const MARCAS = [
     {
-        id:'1',
-        nombre: 'Porsche'
+        id: 1,
+        nombre: 'Dodge GTX V8'
     },
     {
-        id:'2',
-        nombre: 'Toyota'
+        id: 2,
+        nombre: 'IKA Kaiser Carabela'
     },
     {
-        id:'3',
-        nombre: 'Siam Di Tella'
+        id: 3,
+        nombre: 'Citroën 2CV'
     }
 ]
 
@@ -19,11 +19,11 @@ export const AÑOS = Array.from( new Array (10), (valor, index) => AÑOMAXIMO - 
 
 export const PLANES = [
     {
-        id: '1',
+        id: 1,
         nombre: 'Basico'
     },
     {
-        id: '2',
+        id: 2,
         nombre: 'Completo'
     }
 ]

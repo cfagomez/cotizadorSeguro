@@ -1,10 +1,14 @@
 import React from 'react'
 import useCotizador from '../hooks/useCotizador'
+import { MARCAS, PLANES } from '../constants'
 
 const ModalResultado = () => {
 
     const {resultado, reestablecerDatos, datos} = useCotizador()
     const {marca, plan, año} = datos
+
+    const [nombreMarca] = MARCAS.filter(m => m.id === Number(marca))
+    const [tipoPlan] = PLANES.filter(p => p.id === Number(plan))
 
   return (
     <div className='modal'>
@@ -15,7 +19,7 @@ const ModalResultado = () => {
         </div>
         <div className='flex-div'>
             <h3>Marca: </h3>
-            <span>{marca}</span>
+            <span>{nombreMarca.nombre}</span>
         </div>
         <hr />
         <div className='flex-div'>
@@ -25,7 +29,7 @@ const ModalResultado = () => {
         <hr />
         <div className='flex-div'>
             <h3>Plan: </h3>
-            <span>{plan}</span>
+            <span>{tipoPlan.nombre}</span>
         </div>
         <button
             className='button m-top'
