@@ -101,7 +101,8 @@ const Formulario = () => {
                 }
             </div>
         </div>
-        <input 
+        <input
+            className="button"
             type="submit"
             value='Enviar'
         />

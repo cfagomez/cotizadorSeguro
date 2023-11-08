@@ -12,6 +12,7 @@ const CotizadorProvider = ({children}) => {
     })
     const [error, setError] = useState('')
     const [resultado, setResultado] = useState(0)
+    const [modal, setModal] = useState(false)
 
     const handleChangeDatos = (e) => {
 
@@ -38,10 +39,24 @@ const CotizadorProvider = ({children}) => {
 
         setResultado(resultado)
 
+        setModal(true)
+
+    }
+
+    const reestablecerDatos = () => {
+
+        setDatos({
+            marca: '',
+            año: '',
+            plan: ''
+        })
+
+        setModal(false)
+
     }
 
   return (
-    <CotizadorContext.Provider value={{datos, handleChangeDatos, error, setError, cotizarSeguro}}>
+    <CotizadorContext.Provider value={{datos, handleChangeDatos, error, setError, cotizarSeguro, resultado, modal, reestablecerDatos}}>
         {children}
     </CotizadorContext.Provider>
   )

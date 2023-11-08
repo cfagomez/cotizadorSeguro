@@ -1,6 +1,10 @@
 import Formulario from "./components/Formulario"
+import ModalResultado from "./components/ModalResultado"
+import useCotizador from "./hooks/useCotizador"
 
 function App() {
+
+  const {modal} = useCotizador()
   
   return (
     <>
@@ -9,6 +13,9 @@ function App() {
       </h1>
       <main className="container">
         <Formulario />
+        {
+          modal && <ModalResultado />
+        }
       </main>
     </>
   )
