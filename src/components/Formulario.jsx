@@ -81,25 +81,25 @@ const Formulario = () => {
             <label>
                 Tipo de Plan
             </label>
-            <div className="flex-container">
+            <select 
+                name="plan"
+                value={datos.plan}
+                onChange={handleChangeDatos}
+            >
+                <option value="">-- Seleccione un tipo de Plan --</option>
                 {
                     PLANES.map(plan => (
 
-                        <Fragment>
-                            <input 
-                                name='plan'
-                                type="radio"
-                                value={plan.id}
-                                onChange={handleChangeDatos}
-                            />
-                            <p className="p-radio">
-                                {plan.nombre}
-                            </p>
-                        </Fragment>
-                        
+                        <option 
+                            key={plan.id}
+                            value={plan.id}
+                        >
+                            {plan.nombre}
+                        </option>
+
                     ))
                 }
-            </div>
+            </select>
         </div>
         <input
             className="button"

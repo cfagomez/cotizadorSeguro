@@ -4,7 +4,7 @@ import { MARCAS, PLANES } from '../constants'
 
 const ModalResultado = () => {
 
-    const {resultado, reestablecerDatos, datos} = useCotizador()
+    const {resultado, reestablecerDatos, datos, modificarDatos} = useCotizador()
     const {marca, plan, año} = datos
 
     const [nombreMarca] = MARCAS.filter(m => m.id === Number(marca))
@@ -31,12 +31,20 @@ const ModalResultado = () => {
             <h3>Plan: </h3>
             <span>{tipoPlan.nombre}</span>
         </div>
-        <button
-            className='button m-top'
-            onClick={reestablecerDatos}
-        >
-            Aceptar
-        </button>
+        <div className='flex-div m-top'>
+          <button
+              className='button'
+              onClick={reestablecerDatos}
+          >
+              Aceptar
+          </button>
+          <button
+              className='button'
+              onClick={modificarDatos}
+          >
+              Modificar
+          </button>
+        </div>
       </div>
     </div>
   )

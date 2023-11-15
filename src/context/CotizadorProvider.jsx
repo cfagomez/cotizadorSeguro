@@ -55,8 +55,14 @@ const CotizadorProvider = ({children}) => {
 
     }
 
+    const modificarDatos = () => {
+
+        setModal(false)
+
+    }
+
   return (
-    <CotizadorContext.Provider value={{datos, handleChangeDatos, error, setError, cotizarSeguro, resultado, modal, reestablecerDatos}}>
+    <CotizadorContext.Provider value={{datos, handleChangeDatos, error, setError, cotizarSeguro, resultado, modal, reestablecerDatos, modificarDatos}}>
         {children}
     </CotizadorContext.Provider>
   )
