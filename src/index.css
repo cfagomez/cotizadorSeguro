@@ -69,6 +69,22 @@ body {
 
 }
 
+@media (max-width: 768px) {
+
+  .container {
+
+    width: 95%;
+
+  }
+
+  .button {
+
+    width: 100%;
+
+  }
+
+}
+
 /* FORMULARIO */
 
 form {
@@ -123,6 +139,28 @@ input[type='submit'] {
 
 }
 
+@media (max-width: 768px) {
+
+  h1 {
+
+    font-size: 1.5rem;
+
+  }
+
+  label {
+
+    font-size: 1rem;
+
+  }
+
+  select {
+
+    font-size: 0.75rem;
+
+  }
+
+}
+
 /* ERROR */
 
 .container p {
@@ -143,6 +181,16 @@ input[type='submit'] {
   padding: 7.5px 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 10px;
+
+}
+
+@media (max-width: 768px) {
+
+  .error-message {
+
+    font-size: 0.75rem;
+
+  }
 
 }
 
@@ -228,6 +276,42 @@ hr {
 .flex-div span {
 
   font-size: 1.25rem;
+
+}
+
+@media (max-width: 768px) {
+
+  .modal-content {
+
+    width: 100%;
+    padding: 10px;
+
+  }
+
+  h2, .p-total {
+
+    font-size: 2rem;
+
+  }
+
+  h3 {
+
+    font-size: 1rem;
+
+  }
+
+  .flex-div span {
+
+    font-size: 1rem;
+
+  }
+
+  .flex-column {
+
+    flex-direction: column;
+    gap: 5px;
+
+  }
 
 }
 

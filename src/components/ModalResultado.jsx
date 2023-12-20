@@ -31,7 +31,7 @@ const ModalResultado = () => {
             <h3>Plan: </h3>
             <span>{tipoPlan.nombre}</span>
         </div>
-        <div className='flex-div m-top'>
+        <div className='flex-div m-top flex-column'>
           <button
               className='button'
               onClick={reestablecerDatos}
